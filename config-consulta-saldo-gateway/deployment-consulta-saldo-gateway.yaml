@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: consulta-saldo-gateway
-          image: docker-registry.default.svc:5000/integration-services-lab/consulta-saldo-gateway:latest
+          image: quay.io/lcoronad/consulta-saldo-gateway:1.0
           env:
             - name: SPRING_APPLICATION_JSON
               value: '{"server":{"undertow":{"io-threads":10, "worker-threads":20 }}}'
