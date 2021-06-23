@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: consulta-saldo-app
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: redhat-integration
+    server: https://kubernetes.default.svc 
+  project: default 
+  source: 
+    path: config-consulta-saldo
+    repoURL: https://github.com/lcoronad/redhat-integration-gitops
+    targetRevision: main
+  syncPolicy: 
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
