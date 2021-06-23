@@ -37,7 +37,7 @@ data:
   service.rest.consulta.saldo.description: "Consultar Saldo"
   service.rest.health.uri: /health-check
   service.rest.health.description: "Health"
-  ws.endpoint.consultar-saldo: http://localhost:8090/consultaSaldo
+  ws.endpoint.consultar-saldo: http://consulta-saldo.redhat-integration.svc.cluster.local:8080/consultaSaldo
   ws.endpoint.timeout: "30000"
   logging.level.co.com.redhat.integration.consultaSaldoGateway: "DEBUG"
   logging.level.root: "INFO"
