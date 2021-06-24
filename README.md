@@ -7,7 +7,7 @@ Proyecto de ejemplo para GitOps
 
 ## Crear la imagen es de Consulta Saldo Gateway
 
-> Crear la estructura del source to image
+> Crear la estructura del source to image, si se usa la carpeta de este repositorio este comando se debe excluir
 
 ```
 s2i create consulta-saldo-gateway s2i-consulta-saldo-gateway
@@ -18,7 +18,7 @@ s2i create consulta-saldo-gateway s2i-consulta-saldo-gateway
 cd s2i-consulta-saldo-gateway/
 ```
 
-> Modificar el dockerfile y copiar los archivos necesarios para la personalización, en los archivos de este repositorio se puede ver el Dockerfile de ejemplo
+> Modificar el dockerfile y copiar los archivos necesarios para la personalización, en los archivos de este repositorio se puede ver el Dockerfile de ejemplo, si se usa la carpeta de este repositorio este comando se debe excluir
 
 > Verificar las imagenes actuales
 ```
@@ -60,6 +60,11 @@ podman push <ID> docker://quay.io/<user_quay>/consulta-saldo-gateway:1.0
 oc login --server=https://{{host_api_ocp}}:6443 --username={{username_ocp}} --password={{clave}} --insecure-skip-tls-verify=true
 ```
 
+> Cambiarse a la raíz del repositorio
+```
+cd ..
+```
+
 > Crear la app en ArgoCD
 ```
 oc apply -f argocd/consulta-saldo-gateway-app.yaml
@@ -68,7 +73,7 @@ oc apply -f argocd/consulta-saldo-gateway-app.yaml
   
 ## Crear la imagen es de Consulta Saldo
 
-> Crear la estructura del source to image
+> Crear la estructura del source to image, si se usa la carpeta de este repositorio este comando se debe excluir
 
 ```
 s2i create consulta-saldo s2i-consulta-saldo
@@ -79,7 +84,7 @@ s2i create consulta-saldo s2i-consulta-saldo
 cd s2i-consulta-saldo/
 ```
 
-> Modificar el dockerfile y copiar los archivos necesarios para la personalización, en los archivos de este repositorio se puede ver el Dockerfile de ejemplo
+> Modificar el dockerfile y copiar los archivos necesarios para la personalización, en los archivos de este repositorio se puede ver el Dockerfile de ejemplo, si se usa la carpeta de este repositorio este comando se debe excluir
 
 > Verificar las imagenes actuales
 ```
