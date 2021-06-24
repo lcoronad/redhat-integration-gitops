@@ -5,7 +5,7 @@ Proyecto de ejemplo para GitOps
 
 > Para crear las imágenes en un repositorio externo se pueden seguir los siguientes pasos
 
-## Crear la imagen es de Consulta Saldo Gateway
+## Crear la imagen de Consulta Saldo Gateway y subirla a Quay.io
 
 > Crear la estructura del source to image, si se usa la carpeta de este repositorio este comando se debe excluir
 
@@ -55,23 +55,7 @@ podman login -u {{user_quay}} quay.io
 podman push <ID> docker://quay.io/<user_quay>/consulta-saldo-gateway:1.0
 ```
   
-> Autenticarse en OCP, en el comando se debe cambiar el **{{host_api_ocp}}**, **{{username_ocp}** y **{{clave}}**
-```
-oc login --server=https://{{host_api_ocp}}:6443 --username={{username_ocp}} --password={{clave}} --insecure-skip-tls-verify=true
-```
-
-> Cambiarse a la raíz del repositorio
-```
-cd ..
-```
-
-> Crear la app en ArgoCD
-```
-oc apply -f argocd/consulta-saldo-gateway-app.yaml
-```
-
-  
-## Crear la imagen es de Consulta Saldo
+## Crear la imagen de Consulta Saldo y subirla a Quay.io
 
 > Crear la estructura del source to image, si se usa la carpeta de este repositorio este comando se debe excluir
 
@@ -121,14 +105,22 @@ podman login -u <user_quay> quay.io
 podman push <ID> docker://quay.io/<user_quay>/consulta-saldo:1.0
 ```
 
-> Autenticarse en OCP
+
+## Crear las aplicaciones en ArgoCD
+
+> Autenticarse en OCP, en el comando se debe cambiar el **{{host_api_ocp}}**, **{{username_ocp}** y **{{clave}}**
 ```
-oc login --server=https://<host_api_ocp>:6443 --username=<username_ocp> --password=<clave> --insecure-skip-tls-verify=true
+oc login --server=https://{{host_api_ocp}}:6443 --username={{username_ocp}} --password={{clave}} --insecure-skip-tls-verify=true
 ```
 
 > Cambiarse a la raíz del repositorio
 ```
 cd ..
+```
+
+> Crear la app en ArgoCD
+```
+oc apply -f argocd/consulta-saldo-gateway-app.yaml
 ```
 
 > Crear la app en ArgoCD
