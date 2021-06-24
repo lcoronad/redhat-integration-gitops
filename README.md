@@ -7,7 +7,7 @@ Proyecto de ejemplo para GitOps
 
 ## Crear la imagen de Consulta Saldo Gateway y subirla a Quay.io
 
-> Crear la estructura del source to image, si se usa la carpeta de este repositorio este comando se debe excluir
+> Crear la estructura del source to image, **si se usa la carpeta de este repositorio este comando se debe excluir**
 
 ```
 s2i create consulta-saldo-gateway s2i-consulta-saldo-gateway
@@ -18,7 +18,7 @@ s2i create consulta-saldo-gateway s2i-consulta-saldo-gateway
 cd s2i-consulta-saldo-gateway/
 ```
 
-> Modificar el dockerfile y copiar los archivos necesarios para la personalización, en los archivos de este repositorio se puede ver el Dockerfile de ejemplo, si se usa la carpeta de este repositorio este comando se debe excluir
+> Modificar el dockerfile y copiar los archivos necesarios para la personalización, en los archivos de este repositorio se puede ver el Dockerfile de ejemplo, **si se usa la carpeta de este repositorio este comando se debe excluir**
 
 > Verificar las imagenes actuales
 ```
@@ -57,7 +57,7 @@ podman push <ID> docker://quay.io/<user_quay>/consulta-saldo-gateway:1.0
   
 ## Crear la imagen de Consulta Saldo y subirla a Quay.io
 
-> Crear la estructura del source to image, si se usa la carpeta de este repositorio este comando se debe excluir
+> Crear la estructura del source to image, **si se usa la carpeta de este repositorio este comando se debe excluir**
 
 ```
 s2i create consulta-saldo s2i-consulta-saldo
@@ -68,7 +68,7 @@ s2i create consulta-saldo s2i-consulta-saldo
 cd s2i-consulta-saldo/
 ```
 
-> Modificar el dockerfile y copiar los archivos necesarios para la personalización, en los archivos de este repositorio se puede ver el Dockerfile de ejemplo, si se usa la carpeta de este repositorio este comando se debe excluir
+> Modificar el dockerfile y copiar los archivos necesarios para la personalización, en los archivos de este repositorio se puede ver el Dockerfile de ejemplo, **si se usa la carpeta de este repositorio este comando se debe excluir**
 
 > Verificar las imagenes actuales
 ```
