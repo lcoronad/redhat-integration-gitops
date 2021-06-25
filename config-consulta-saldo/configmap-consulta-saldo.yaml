@@ -13,3 +13,4 @@ data:
   endpoints.health.enabled: "false"
   logging.level.co.com.redhat.integration.consultaSaldoGateway: "DEBUG"
   logging.level.root: "INFO"
+  logging.level.co.com.redhat.integration.consultaSaldoGateway.test: "INFO"
